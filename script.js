@@ -1,12 +1,11 @@
 function convertBinaryToDecimal() {
     const binaryInput = document.getElementById('binaryInput').value;
-    const decimalOutput = document.getElementById('decimalOutput');
 
     if (!binaryInput.match(/^[01]+$/)) {
-        decimalOutput.textContent = 'Invalid binary input';
+        alert('Please enter a valid binary number (0s and 1s only).');
         return;
     }
 
     const decimalValue = parseInt(binaryInput, 2);
-    decimalOutput.textContent = 'Decimal equivalent: ' + decimalValue;
+    document.getElementById('decimalOutput').textContent = 'Decimal equivalent: ' + decimalValue;
 }
