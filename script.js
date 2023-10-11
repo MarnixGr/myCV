@@ -1,11 +1,25 @@
-function convertBinaryToDecimal() {
-    const binaryInput = document.getElementById('binaryInput').value;
+function convert() {
+    const input = document.getElementById('input').value;
+    const binaryOutput = document.getElementById('binaryOutput');
+    const decimalOutput = document.getElementById('decimalOutput');
 
-    if (!binaryInput.match(/^[01]+$/)) {
-        alert('Please enter a valid binary number (0s and 1s only).');
+    if (input === '') {
+        binaryOutput.textContent = 'Binary equivalent: ';
+        decimalOutput.textContent = 'Decimal equivalent: ';
         return;
     }
 
-    const decimalValue = parseInt(binaryInput, 2);
-    document.getElementById('decimalOutput').textContent = 'Decimal equivalent: ' + decimalValue;
+    if (input.match(/^[01]+$/)) {
+        const decimalValue = parseInt(input, 2);
+        decimalOutput.textContent = 'Decimal equivalent: ' + decimalValue;
+    } else if (input.match(/^\d+$/)) {
+        const binaryValue = (parseInt(input)).toString(2);
+        binaryOutput.textContent = 'Binary equivalent: ' + binaryValue;
+    } else {
+        binaryOutput.textContent = 'Binary equivalent: Invalid input';
+        decimalOutput.textContent = 'Decimal equivalent: Invalid input';
+    }
 }
+
+const inputField = document.getElementById('input');
+inputField.addEventListener('input', convert);
