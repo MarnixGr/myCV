@@ -1,66 +1,39 @@
 body {
-    background: linear-gradient(to top, #f5f5f5, #e3e3e3);
-    height: 100vh;
+    background: linear-gradient(to top, #f0f5e9, #d9e3f0);
+    font-family: "Arial", sans-serif;
+    padding: 20px;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-} 
-
-/* Added background color for .container */
-.container {
-    background-color: white; /* Add your desired background color */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 h1 {
-    font-family: "Arial", sans-serif;
     font-size: 3em;
-    color: #2b2b2b;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-top: 0; /* Remove top margin */
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 p {
-    font-family: "Arial", sans-serif;
-    color: #404040;
-    font-size: 1.2em;
-    text-align: center;
+    font-size: 1.1em;
+    color: #555;
     max-width: 80%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-img {
-    max-width: 100%;
-    display: block; /* To center the image within its parent */
-    margin: 0 auto; /* To center the image horizontally */
-    border: 1px solid #ccc;
+.container {
+    background-color: white;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-table {
-    width: 80%;
-    max-width: 500px;
-    margin: 0 auto;
-    border-collapse: collapse;
     margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-th, td {
-    padding: 15px;
-    border: 1px solid #ccc;
-}
-
-th {
-    background-color: #f0f0f0;
-    font-weight: bold;
+    max-width: 80%;
 }
