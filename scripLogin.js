@@ -2,8 +2,8 @@ document.getElementById("passwordForm").addEventListener("submit", function(even
     event.preventDefault();
     var password = document.getElementById("password").value;
     if (password === "chickens") {
-        document.getElementById("message").textContent = "Access Granted";
+        document.getElementById("message").textContent = "Access Doné";
     } else {
-        document.getElementById("message").textContent = "Access Denied";
+        document.getElementById("message").textContent = "Access Interdit";
     }
 });
