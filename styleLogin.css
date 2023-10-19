@@ -22,3 +22,7 @@ button {
     border: none;
     cursor: pointer;
 }
+body.confetti {
+    background: url('confetti.jpg') center center fixed;
+    background-size: cover;
+}
