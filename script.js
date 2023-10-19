@@ -2,11 +2,10 @@ document.getElementById("passwordForm").addEventListener("submit", function(even
     event.preventDefault();
     var password = document.getElementById("password").value;
     if (password === "Chickens!") {
-        // Change the background and redirect to the congrats page
-        document.body.classList.add("confetti");
+        document.body.style.background = "url('confetti.jpg') center center fixed";
+        document.body.style.backgroundSize = "cover";
         setTimeout(function() {
             window.location.href = "congrats.html";
-        }, 2000); // Change the URL and time delay as needed
     } else {
         document.getElementById("message").textContent = "Access Denied";
     }
