@@ -1,25 +1,13 @@
-function convert() {
-    const input = document.getElementById('input').value;
-    const binaryOutput = document.getElementById('binaryOutput');
-    const decimalOutput = document.getElementById('decimalOutput');
-
-    if (input === '') {
-        binaryOutput.textContent = 'Binary equivalent: ';
-        decimalOutput.textContent = 'Decimal equivalent: ';
-        return;
-    }
-
-    if (input.match(/^[01]+$/)) {
-        const decimalValue = parseInt(input, 2);
-        decimalOutput.textContent = 'Decimal equivalent: ' + decimalValue;
-    } else if (input.match(/^\d+$/)) {
-        const binaryValue = (parseInt(input)).toString(2);
-        binaryOutput.textContent = 'Binary equivalent: ' + binaryValue;
+document.getElementById("passwordForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var password = document.getElementById("password").value;
+    if (password === "Chickens!") {
+        // Change the background and redirect to the congrats page
+        document.body.classList.add("confetti");
+        setTimeout(function() {
+            window.location.href = "congrats.html";
+        }, 2000); // Change the URL and time delay as needed
     } else {
-        binaryOutput.textContent = 'Binary equivalent: Invalid input';
-        decimalOutput.textContent = 'Decimal equivalent: Invalid input';
+        document.getElementById("message").textContent = "Access Denied";
     }
-}
-
-const inputField = document.getElementById('input');
-inputField.addEventListener('input', convert);
+});
